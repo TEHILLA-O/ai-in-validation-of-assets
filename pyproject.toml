@@ -1,0 +1,30 @@
+[project]
+name = "valuationlab"
+version = "1.0.0"
+description = "Integrated three-statement financial modelling, forecasting and DCF valuation"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn>=0.32",
+  "pydantic>=2.9",
+  "sqlalchemy>=2.0",
+  "psycopg[binary]>=3.2",
+  "pandas>=2.2",
+  "numpy>=2.1",
+  "openpyxl>=3.1",
+  "python-multipart>=0.0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "httpx>=0.27"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["financial_engine*", "backend*", "exports*", "ai*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

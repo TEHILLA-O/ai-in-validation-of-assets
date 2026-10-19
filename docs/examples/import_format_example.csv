@@ -1,0 +1,4 @@
+period,line_item,value,currency,unit_scale,accounting_basis
+2024,Revenue,100,USD,thousands,Synthetic format example, not a filing
+2024,Cost of goods sold,,USD,thousands,Synthetic format example, not a filing
+2024,Cash,2.5,USD,millions,Synthetic format example, not a filing
